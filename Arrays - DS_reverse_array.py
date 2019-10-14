@@ -3,6 +3,11 @@ In an array, , of size , each memory location has some unique index,  (where ), 
 (you may also see it written as ).
 Given an array, , of  integers, print each element in reverse order as a single line of space-separated integers.'''
 
+'''Method-1:- arr.reverse()
+   Method-2:- while start < end:
+               a = arr[start]
+               arr[start] = arr[end]
+               arr[end] = a '''
 
 #arr.reverse()
 #print(arr)
