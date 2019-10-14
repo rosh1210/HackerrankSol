@@ -15,20 +15,19 @@ Given an array, , of  integers, print each element in reverse order as a single 
 #for i in range(n):
  #   print(arr)
   #  print()
-
+#Reverse function for reversing the array
 def reverse(a):
     start = 0
     end = n - 1
     while start < end:
-        # a = arr[start]
-        # arr[start] = arr[end]
-        # arr[end] = a
-
+        #New method i came across for swapping end and start!!!
         a[start], a[end] = a[end], a[start]
         start = start + 1
         end = end - 1
 
     print(a)
+   
+#main function in python, calling the reverse function in the main function
 if __name__ == '__main__':
     n = int(input("Enter the size of the array\n"))
     arr = []
