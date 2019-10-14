@@ -9,29 +9,36 @@ Given an array, , of  integers, print each element in reverse order as a single 
                arr[start] = arr[end]
                arr[end] = a '''
 
-#arr.reverse()
-#print(arr)
-#/reversing the array
-#for i in range(n):
- #   print(arr)
-  #  print()
-#Reverse function for reversing the array
-def reverse(a):
+#!/bin/python3
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the reverseArray function below.
+def reverseArray(a,n):
+
     start = 0
     end = n - 1
     while start < end:
-        #New method i came across for swapping end and start!!!
+
         a[start], a[end] = a[end], a[start]
         start = start + 1
         end = end - 1
 
-    print(a)
-   
-#main function in python, calling the reverse function in the main function
+    return a
+
 if __name__ == '__main__':
-    n = int(input("Enter the size of the array\n"))
-    arr = []
-    for i in range(n):
-        arr.append(int(input()))
-    #print(arr)
-    reverse(arr)
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    arr_count = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    res = reverseArray(arr,arr_count)
+
+    fptr.write(' '.join(map(str, res)))
+    fptr.write('\n')
+
+    fptr.close()
