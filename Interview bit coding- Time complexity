@@ -1,0 +1,74 @@
+Ques-1:      A) for(i = 0; i < n; i++)
+ 
+             B) for(i = 0; i < n; i += 2)
+ 
+             C) for(i = 1; i < n; i *= 2)
+ 
+             D) for(i = n; i > -1; i /= 2)   
+             
+             Which function is the most efficient? In other words, which loop completes the fastest.
+
+Solution:-
+            A) for(i = 0; i < n; i++)
+                Time complexity = O(n) 
+                The loop variables is incremented / decremented by a constant amount
+            B) for(i = 0; i < n; i += 2)
+                Time complexity = O(n) 
+                The loop variables is incremented / decremented by a constant amount
+            C) for(i = 1; i < n; i *= 2)
+                Time complexity = O(log n)
+                The loop variables is divided / multiplied by a constant amount.
+            D) for(i = n; i > -1; i /= 2)  
+                The loop doesn't terminate. 
+                
+Ques-2:
+            What is the time complexity of the following code :
+            
+            int a = 0, i = N;
+            while (i > 0) {
+              a += i;
+              i /= 2;
+          }
+          
+ Solution:-   a += i;
+              i /= 2;
+              The loop variable is added and divided by constant amount. Therefore, the time complexity = O(n) + O(log n)
+              Overall, O(log n)
+ 
+              Time complexities for while loop
+              
+              1) Time complexity of a simple loop when the loop variable is incremented or decremented by a constant amount:
+                int i = 1;  
+                do  
+                  {  
+                      i++;  
+                  }while(i<=n);  
+                                
+                                O(n)
+                                
+                2)Time complexity of a loop when the loop variable is divided or multiplied by a constant amount:
+                int i=1;  
+                do  
+                {  
+                  i = i*c;  
+                 }while(i<=n);   
+                                O(log n)
+                                
+                 3)Time complexity of a nested loop.
+                 int i=0;  
+                do{  
+                      do{  
+                               int j =0;  
+                                    j++;  
+                           }while(j<=i);  
+                       i++;  
+                      }while(i<=n-1);   
+                              
+                              O(n^2)
+                              
+                  Link:- https://www.javatpoint.com/post/time-complexity#targetText=Time%20complexity%20of%20a%20nested%20loop.&targetText=j%3A%20It%20is%20an%20inner,statement%20is%20to%20be%20executed.
+                  
+                              
+                  
+                  
+          
