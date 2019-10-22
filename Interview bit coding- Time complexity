@@ -68,6 +68,14 @@ Ques-2:
                               
                   Link:- https://www.javatpoint.com/post/time-complexity#targetText=Time%20complexity%20of%20a%20nested%20loop.&targetText=j%3A%20It%20is%20an%20inner,statement%20is%20to%20be%20executed.
                   
+  Ques 3:
+                 int count = 0;
+                 for (int i = N; i > 0; i /= 2) {
+                     for (int j = 0; j < i; j++) {
+                         count += 1;
+                     }
+                 }
+                  
                               
                   
                   
